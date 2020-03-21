@@ -1,0 +1,29 @@
+{
+  "name": "node-red-contrib-megaio",
+  "version": "1.0.0",
+  "description": "Interact with the MegaIO development board from https://sequentmicrosystems.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-debug": "mocha --inspect-brk"
+  },
+  "author": "brian@digital-traffic.net",
+  "license": "MIT",
+  "node-red": {
+    "nodes": {
+      "relay-on": "relay-on.js"
+    }
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-mocha": "^6.0.0",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "gulp-spawn": "^0.4.5"
+  }
+}

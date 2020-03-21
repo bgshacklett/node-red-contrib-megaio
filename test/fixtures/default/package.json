@@ -1,0 +1,16 @@
+{
+  "name": "test-fixture-default",
+  "version": "1.0.0",
+  "description": "A vanilla node-red test fixture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-red": "1.0.4",
+    "test-node": "file:./test-node"
+  }
+}
