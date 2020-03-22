@@ -7,7 +7,7 @@
   "license": "MIT",
   "node-red": {
     "nodes": {
-      "relay-on": "relay-on.js"
+      "relay-on": "src/relay-on.js"
     }
   },
   "devDependencies": {

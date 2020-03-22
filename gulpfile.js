@@ -11,7 +11,7 @@ function run(cb) {
 
   spawnSync(
          'docker',
-         ['run', '--rm', '-it', '-p', '1880:1880', 'test-node'],
+         ['run', '--rm', '-it', '-p', '1880:1880', '--name', 'test-node', 'test-node'],
          { stdio: 'inherit' },
        );
 

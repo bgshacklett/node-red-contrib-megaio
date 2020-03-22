@@ -6,6 +6,6 @@ COPY test/fixtures/default/settings.js /data/
 RUN npm install --only=production
 
 # Copy the module under test to the container
-COPY package*.json ./test-node/
-COPY src ./test-node/
+COPY package*.json test-node/
+COPY src/ test-node/src/
 RUN npm install ./test-node
