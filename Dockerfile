@@ -1,8 +1,8 @@
 FROM nodered/node-red
 
-# Copy package.json to the WORKDIR so npm builds all
-# of your added modules for Node-RED
+# Configure the test fixture
 COPY test/fixtures/default/package.json .
+COPY test/fixtures/default/settings.js /data/
 
 # Copy the module under test to the container
 COPY package*.json ./test-node/

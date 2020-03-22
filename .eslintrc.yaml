@@ -14,3 +14,6 @@ rules:
         beforeColon: false
         afterColon:  true
   brace-style: 0
+overrides:
+  excludedFiles:
+    - settings.js
