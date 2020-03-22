@@ -10,7 +10,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "node-red": "1.0.4",
-    "test-node": "file:./test-node"
+    "node-red": "1.0.4"
   }
 }
