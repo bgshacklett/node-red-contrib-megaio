@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "Interact with the MegaIO development board from https://sequentmicrosystems.com/",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha",
-    "test-debug": "mocha --inspect-brk"
-  },
   "author": "brian@digital-traffic.net",
   "license": "MIT",
   "node-red": {
@@ -25,5 +21,9 @@
   },
   "dependencies": {
     "gulp-spawn": "^0.4.5"
+  },
+  "scripts": {
+    "test": "mocha",
+    "test-debug": "mocha --inspect-brk"
   }
 }
