@@ -259,9 +259,9 @@ module.exports = {
             // off - turn off all logging (doesn't affect metrics or audit)
             level: "trace",
             // Whether or not to include metric events in the log output
-            metrics: false,
+            metrics: true,
             // Whether or not to include audit events in the log output
-            audit: false
+            audit: true
         }
     },
 

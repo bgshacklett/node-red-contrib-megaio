@@ -1,25 +1,48 @@
 <script type="text/javascript">
+  function validateId(value) {
+    return Number.isInteger(value) &&
+           value >= 0 &&
+           value <= 7
+  }
+
   RED
   .nodes
   .registerType(
                  'relay-on',
                  {
-                   category: 'output',
-                   color:    '#a6bbcf',
-                   inputs:   1,
-                   outputs:  1,
-                   icon:     "relay-on.png",
-                   defaults: {
-                               id:   { value: 0  }
-                             },
+                   category:   'output',
+                   color:      '#a6bbcf',
+                   inputs:     1,
+                   outputs:    0,
+                   icon:       "relay-on.png",
+                   label:      function getLabel() {
+                                 return this.name || this.relayid || 'relay-on'
+                               },
+                   labelStyle: function getLabelStyle() {
+                                 return this.name ? "node_label_italic" : ""
+                               },
+                   defaults:   {
+                                 name: {
+                                         value: "",
+                                       },
+                                 relayid: {
+                                            value:    null,
+                                            required: true,
+                                            validate: validateId,
+                                          },
+                               },
                  },
                );
 </script>
 
 <script type="text/html" data-template-name="relay-on">
   <div class="form-row">
-    <label for="node-input-id"><i class="icon-tag"></i> ID</label>
-    <input type="text" id="node-input-id">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-relayid"><i class="icon-tag"></i> Relay ID</label>
+    <input type="text" id="node-input-relayid">
   </div>
 </script>
 
